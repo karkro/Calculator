@@ -240,7 +240,7 @@ public class Calculator extends JFrame {
 
 
 		JButton bBackspace = new JButton("\uF0E7");
-		bBackspace.setBounds(10, 60, 48, 48);
+		bBackspace.setBounds(10, 60, 60, 40);
 		bBackspace.setFont(new Font("Wingdings", Font.PLAIN, 10));
 		bBackspace.addActionListener(new ActionListener() {
 			@Override
@@ -346,6 +346,20 @@ public class Calculator extends JFrame {
 		});
 		frmStandardCalculator.getContentPane().add(btnPlus);
 
+		JButton btnMod = new JButton("mod");
+		btnMod.setBounds(210, 60, 48, 48);
+		btnMod.setFont(new Font("Tahoma", Font.PLAIN, 8));
+		btnMod.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				double ops = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+				ops = ops * ops;
+				String iNum = tfDisplay.getText() + btnMod.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btnMod);
+
 		JButton btnPercent = new JButton("%");
 		btnPercent.setBounds(210, 110, 48, 48);
 		btnPercent.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -381,6 +395,9 @@ public class Calculator extends JFrame {
 			}
 		});
 		frmStandardCalculator.getContentPane().add(btnEquals);
+
+
+
 
 
 	}
