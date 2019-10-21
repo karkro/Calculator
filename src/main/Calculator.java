@@ -1,7 +1,5 @@
 package main;
 
-import sun.management.snmp.jvminstr.JvmThreadInstanceEntryImpl;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -36,16 +34,16 @@ public class Calculator extends JFrame {
 	}
 
 
-	/**
-	* Create the application
+	/*
+	Create the application
 	*/
 
 	public Calculator() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame
+	/*
+	 Initialize the contents of the frame
 	 */
 	private void initialize() {
 		frmStandardCalculator = new JFrame();
