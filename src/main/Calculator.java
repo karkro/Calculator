@@ -47,7 +47,7 @@ public class Calculator extends JFrame {
 	 */
 	private void initialize() {
 		frmStandardCalculator = new JFrame();
-		frmStandardCalculator.setBounds(100, 100, 325, 375);
+		frmStandardCalculator.setBounds(100, 100, 325, 315);
 		frmStandardCalculator.setTitle("Standard Calculator");
 		frmStandardCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmStandardCalculator.getContentPane().setLayout(null);
@@ -69,7 +69,7 @@ public class Calculator extends JFrame {
 		miStandard.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				frmStandardCalculator.setBounds(100, 100, 325, 375);
+				frmStandardCalculator.setBounds(100, 100, 325, 315);
 				frmStandardCalculator.setTitle("Standard Calculator");
 				frmStandardCalculator.setResizable(false);
 				tfDisplay.setBounds(10, 10, 300, 45);
@@ -81,7 +81,7 @@ public class Calculator extends JFrame {
 		miScientific.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				frmStandardCalculator.setBounds(100, 100, 580, 375);
+				frmStandardCalculator.setBounds(100, 100, 575, 315);
 				frmStandardCalculator.setTitle("Scientific Calculator");
 				tfDisplay.setBounds(10, 10, 550, 45);
 				frmStandardCalculator.setResizable(false);
@@ -109,140 +109,8 @@ public class Calculator extends JFrame {
 		});
 		mFile.add(miExit);
 
-		JButton btn0 = new JButton("0");
-		btn0.setBounds(10, 260, 98, 48);
-		btn0.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn0.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn0.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn0);
 
-		JButton btn1 = new JButton("1");
-		btn1.setBounds(10, 210, 58, 38);
-		btn1.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn1.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn1.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn1);
-
-		JButton btn2 = new JButton("2");
-		btn2.setBounds(60, 210, 48, 48);
-		btn2.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn2.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = btn2.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn2);
-
-		JButton btn3 = new JButton("3");
-		btn3.setBounds(110, 210, 48, 48);
-		btn3.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn3.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn3.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn3);
-
-		JButton btn4 = new JButton("4");
-		btn4.setBounds(10, 160, 48, 48);
-		btn4.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn4.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn4.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn4);
-
-		JButton btn5 = new JButton("5");
-		btn5.setBounds(60, 160, 48, 48);
-		btn5.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn5.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn5.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn5);
-
-		JButton btn6 = new JButton("6");
-		btn6.setBounds(110, 160, 48, 48);
-		btn6.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn6.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn6.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn6);
-
-		JButton btn7 = new JButton("7");
-		btn7.setBounds(10, 110, 48, 48);
-		btn7.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn7.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn7.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn7);
-
-		JButton btn8 = new JButton("8");
-		btn8.setBounds(60, 110, 48, 48);
-		btn8.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn8.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn8.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn8);
-
-		JButton btn9 = new JButton("9");
-		btn9.setBounds(110, 110, 48, 48);
-		btn9.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btn9.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btn9.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btn9);
-
-		JButton btnDot = new JButton(".");
-		btnDot.setBounds(110, 260, 48, 48);
-		btnDot.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnDot.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String iNum = tfDisplay.getText() + btnDot.getText();
-				tfDisplay.setText(iNum);
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btnDot);
-
-
-		JButton bBackspace = new JButton("\uF0E7");
+		JButton bBackspace = new JButton("<=");
 		bBackspace.setBounds(10, 60, 58, 38);
 		bBackspace.setFont(new Font("Wingdings", Font.PLAIN, 10));
 		bBackspace.addActionListener(new ActionListener() {
@@ -259,6 +127,7 @@ public class Calculator extends JFrame {
 		});
 		frmStandardCalculator.getContentPane().add(bBackspace);
 
+
 		JButton btnCE = new JButton("CE");
 		btnCE.setBounds(70, 60, 58, 38);
 		btnCE.setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -270,6 +139,7 @@ public class Calculator extends JFrame {
 		});
 		frmStandardCalculator.getContentPane().add(btnCE);
 
+
 		JButton btnC = new JButton("C");
 		btnC.setBounds(130, 60, 58, 38);
 		btnC.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -280,6 +150,7 @@ public class Calculator extends JFrame {
 			}
 		});
 		frmStandardCalculator.getContentPane().add(btnC);
+
 
 		JButton btnPlusMinus = new JButton("\u00B1");
 		btnPlusMinus.setBounds(190, 60, 58, 38);
@@ -294,57 +165,6 @@ public class Calculator extends JFrame {
 		});
 		frmStandardCalculator.getContentPane().add(btnPlusMinus);
 
-		JButton btnDivision = new JButton("/");
-		btnDivision.setBounds(160, 110, 48, 48);
-		btnDivision.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnDivision.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				firstNum = Double.parseDouble(tfDisplay.getText());
-				tfDisplay.setText("");
-				operations = "/";
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btnDivision);
-
-		JButton btnMultiply = new JButton("*");
-		btnMultiply.setBounds(160, 160, 48, 48);
-		btnMultiply.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnMultiply.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				firstNum = Double.parseDouble(tfDisplay.getText());
-				tfDisplay.setText("");
-				operations = "*";
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btnMultiply);
-
-		JButton btnMinus = new JButton("-");
-		btnMinus.setBounds(160, 210, 48, 48);
-		btnMinus.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnMinus.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				firstNum = Double.parseDouble(tfDisplay.getText());
-				tfDisplay.setText("");
-				operations = "-";
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btnMinus);
-
-		JButton btnPlus = new JButton("+");
-		btnPlus.setBounds(160, 260, 48, 48);
-		btnPlus.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnPlus.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				firstNum = Double.parseDouble(tfDisplay.getText());
-				tfDisplay.setText("");
-				operations = "+";
-			}
-		});
-		frmStandardCalculator.getContentPane().add(btnPlus);
 
 		JButton btnSqrt = new JButton("\u221A");
 		btnSqrt.setBounds(250, 60, 58, 38);
@@ -359,8 +179,62 @@ public class Calculator extends JFrame {
 		});
 		frmStandardCalculator.getContentPane().add(btnSqrt);
 
+
+		JButton btn7 = new JButton("7");
+		btn7.setBounds(10, 100, 58, 38);
+		btn7.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn7.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn7);
+
+
+		JButton btn8 = new JButton("8");
+		btn8.setBounds(70, 100, 58, 38);
+		btn8.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn8.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn8);
+
+
+		JButton btn9 = new JButton("9");
+		btn9.setBounds(130, 100, 58, 38);
+		btn9.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn9.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn9);
+
+
+		JButton btnDivision = new JButton("/");
+		btnDivision.setBounds(190, 100, 58, 38);
+		btnDivision.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnDivision.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				firstNum = Double.parseDouble(tfDisplay.getText());
+				tfDisplay.setText("");
+				operations = "/";
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btnDivision);
+
+
 		JButton btnRMod = new JButton("%");
-		btnRMod.setBounds(210, 110, 48, 48);
+		btnRMod.setBounds(250, 100, 58, 38);
 		btnRMod.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		btnRMod.addActionListener(new ActionListener() {
 			@Override
@@ -372,8 +246,62 @@ public class Calculator extends JFrame {
 		});
 		frmStandardCalculator.getContentPane().add(btnRMod);
 
+
+		JButton btn4 = new JButton("4");
+		btn4.setBounds(10, 140, 58, 38);
+		btn4.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn4.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn4);
+
+
+		JButton btn5 = new JButton("5");
+		btn5.setBounds(70, 140, 58, 38);
+		btn5.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn5.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn5);
+
+
+		JButton btn6 = new JButton("6");
+		btn6.setBounds(130, 140, 58, 38);
+		btn6.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn6.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn6);
+
+
+		JButton btnMultiply = new JButton("*");
+		btnMultiply.setBounds(190, 140, 58, 38);
+		btnMultiply.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnMultiply.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				firstNum = Double.parseDouble(tfDisplay.getText());
+				tfDisplay.setText("");
+				operations = "*";
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btnMultiply);
+
+
 		JButton btn1x = new JButton("1/x");
-		btn1x.setBounds(210, 160, 48, 48);
+		btn1x.setBounds(250, 140, 58, 38);
 		btn1x.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		btn1x.addActionListener(new ActionListener() {
 			@Override
@@ -385,8 +313,61 @@ public class Calculator extends JFrame {
 		frmStandardCalculator.getContentPane().add(btn1x);
 
 
+		JButton btn1 = new JButton("1");
+		btn1.setBounds(10, 180, 58, 38);
+		btn1.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn1.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn1);
+
+
+		JButton btn2 = new JButton("2");
+		btn2.setBounds(70, 180, 58, 38);
+		btn2.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn2.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn2);
+
+
+		JButton btn3 = new JButton("3");
+		btn3.setBounds(130, 180, 58, 38);
+		btn3.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn3.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn3);
+
+
+		JButton btnMinus = new JButton("-");
+		btnMinus.setBounds(190, 180, 58, 38);
+		btnMinus.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnMinus.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				firstNum = Double.parseDouble(tfDisplay.getText());
+				tfDisplay.setText("");
+				operations = "-";
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btnMinus);
+
+
 		JButton btnEquals = new JButton("=");
-		btnEquals.setBounds(210, 210, 48, 98);
+		btnEquals.setBounds(250, 180, 58, 78);
 		btnEquals.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		btnEquals.addActionListener(new ActionListener() {
 			@Override
@@ -415,6 +396,45 @@ public class Calculator extends JFrame {
 		});
 		frmStandardCalculator.getContentPane().add(btnEquals);
 
+
+		JButton btn0 = new JButton("0");
+		btn0.setBounds(10, 220, 118, 38);
+		btn0.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btn0.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btn0.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btn0);
+
+
+		JButton btnDot = new JButton(".");
+		btnDot.setBounds(130, 220, 58, 38);
+		btnDot.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnDot.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String iNum = tfDisplay.getText() + btnDot.getText();
+				tfDisplay.setText(iNum);
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btnDot);
+
+
+		JButton btnPlus = new JButton("+");
+		btnPlus.setBounds(190, 220, 58, 38);
+		btnPlus.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnPlus.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				firstNum = Double.parseDouble(tfDisplay.getText());
+				tfDisplay.setText("");
+				operations = "+";
+			}
+		});
+		frmStandardCalculator.getContentPane().add(btnPlus);
 
 
 		// ----------------------- SCIENTIFIC CALCULATOR ------------------------------
