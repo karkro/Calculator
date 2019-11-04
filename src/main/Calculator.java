@@ -56,6 +56,7 @@ public class Calculator extends JFrame {
 		tfDisplay = new JTextField();
 		tfDisplay.setBounds(10, 10, 300, 45);
 		tfDisplay.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		tfDisplay.setHorizontalAlignment(JTextField.RIGHT);
 		frmStandardCalculator.getContentPane().add(tfDisplay);
 		tfDisplay.setColumns(10);
 
